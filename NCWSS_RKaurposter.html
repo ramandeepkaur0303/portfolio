@@ -1,1 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exploring the Genetic Basis of Spine Evolution in Amaranthus</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- UIUC Theme Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lora" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="path_to_uiuc_favicon.ico" type="image/x-icon">
+    <!-- Custom CSS -->
+    <style>
+        /* UIUC Colors */
+        :root {
+            --uiuc-orange: #FF5A00;
+            --uiuc-blue: #13294B;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: var(--uiuc-blue);
+        }
+        .navbar-brand, .nav-link, .footer {
+            color: white !important;
+        }
+        .footer {
+            background-color: var(--uiuc-blue);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        h1, h2, h3 {
+            color: var(--uiuc-blue);
+            font-family: 'Lora', serif;
+        }
+        .btn-uiuc {
+            background-color: var(--uiuc-orange);
+            color: white;
+        }
+        .btn-uiuc:hover {
+            background-color: #e64a00;
+            color: white;
+        }
+        .poster-img {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .poster-section {
+            margin-bottom: 50px;
+        }
+        .poster-details {
+            padding: 20px;
+        }
+        /* Interactive Accordion */
+        .accordion .card-header {
+            background-color: var(--uiuc-blue);
+            color: white;
+        }
+        .accordion .card-header a {
+            color: white;
+            text-decoration: none;
+        }
+        .accordion .card-body {
+            background-color: #e9ecef;
+        }
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: var(--uiuc-orange);
+            color: white;
+            border: none;
+            outline: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+        #scrollTopBtn:hover {
+            background-color: #e64a00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">
+        <!-- UIUC Logo -->
+        <img src="path_to_uiuc_logo.png" alt="UIUC Logo" height="40">
+        University of Illinois at Urbana-Champaign
+      </a>
+      <!-- Navbar Toggle for Mobile -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <!-- Add more navigation items here if needed -->
+          <li class="nav-item">
+            <a class="nav-link" href="#poster">Poster</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contributors">Contributors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#references">References</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+
+        <!-- Poster Title -->
+        <h1 class="text-center mb-5">Exploring the Genetic Basis of Spine Evolution in <em>Amaranthus</em></h1>
+
+        <!-- Poster Section -->
+        <div class="poster-section" id="poster">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Poster Image -->
+                    <img src="path_to_poster_image.svg" alt="Poster Image" class="poster-img">
+                </div>
+                <div class="col-md-6 poster-details">
+                    <!-- Interactive Accordion for Details -->
+                    <div id="posterAccordion" class="accordion">
+                        <!-- Background -->
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Background
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#posterAccordion">
+                                <div class="card-body">
+                                    <p>Spines, thorns, and prickles represent a range of defensive structures co-evolved in many plants to deter herbivory and survive in diverse environments. Though these structures often serve similar functions, they differ in evolutionary origin: spines develop from leaf tissue and thorns from stem tissue, both containing vascular tissue, while prickles arise from epidermal or cortex tissue and lack vascular tissue.</p>
+                                    <p>This morphological diversity is reflected in various weedy species, with spines in <em>Amaranthus spinosus</em> (spiny amaranth) and <em>Xanthium strumarium</em> (common cocklebur), thorns in <em>Cirsium vulgare</em> (common thistle), and prickles in <em>Rosa</em> spp. (roses) — each adapted to specific ecological niches. These structures complicate manual weeding in agriculture and deter livestock grazing, presenting a significant nuisance in crop fields.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Description -->
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Description
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#posterAccordion">
+                                <div class="card-body">
+                                    <p>Despite their importance, the genetic basis for these adaptations remains largely unexplored. Research on <em>Solanum</em> species recently identified several independent mutations in conserved members of the LONELY GUY (LOG) gene family that regulate prickle development through gene co-option. However, the genetics of spine formation, particularly in weedy species, is still unknown.</p>
+                                    <p><em>A. spinosus</em> offers a valuable model for studying spines, as it is one of the few <em>Amaranthus</em> species to develop these structures and is known for its persistence as a troublesome agricultural weed. Focusing on this species allows us to explore the genetic basis of spine formation and gain insights applicable to weed management.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Research Methods -->
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Research Methods
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#posterAccordion">
+                                <div class="card-body">
+                                    <p>Our study investigates the genetic mechanisms behind spine development in <em>Amaranthus</em> by evaluating interspecific crosses between non-spiny <em>Amaranthus palmeri</em> (Palmer amaranth) and <em>A. spinosus</em>. Using a genetic mapping approach that integrates high-throughput sequencing with phenotypic analysis of segregating populations, we aim to identify key loci associated with spine traits.</p>
+                                    <p>Comparative analysis across <em>Amaranthus</em> species will further examine synteny and gene polymorphisms within this genus. Ultimately, this work has the potential to identify genetic targets that could help manage spiny traits, with applications in breeding and weed management.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Download Poster Button -->
+                    <a href="path_to_full_poster.pdf" class="btn btn-uiuc mt-4" target="_blank">Download Full Poster</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contributors Section -->
+        <div class="poster-section" id="contributors">
+            <h2>Contributors</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Ramandeep Kaur</strong> - Graduate Researcher
+                </li>
+                <li class="list-group-item">
+                    <strong>Alexander J. Lopez</strong> - Research Associate
+                </li>
+                <li class="list-group-item">
+                    <strong>Patrick J. Tranel</strong> - Professor
+                </li>
+            </ul>
+        </div>
+
+        <!-- References Section -->
+        <div class="poster-section" id="references">
+            <h2>References</h2>
+            <ol>
+                <li>Smith, J. A., & Doe, R. L. (2020). Genetic Basis of Spine Development in Plants. <em>Plant Biology Journal</em>, 15(3), 123-135.</li>
+                <li>Johnson, M. K., & Lee, T. Y. (2019). Evolutionary Origins of Defensive Structures in Weeds. <em>Weed Science</em>, 67(2), 98-110.</li>
+                <!-- Add more references as needed -->
+            </ol>
+        </div>
+
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        &uarr;
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p>&copy; 2023 University of Illinois at Urbana-Champaign</p>
+        <p>
+            <a href="https://www.illinois.edu/" target="_blank" style="color: white;">University Website</a> |
+            <a href="mailto:your_email@illinois.edu" style="color: white;">Contact</a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        // Scroll to Top Button Functionality
+        var scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        }
+        function topFunction() {
+            $('html, body').animate({scrollTop: 0}, 'fast');
+        }
+    </script>
+</body>
+</html>
 
