@@ -97,12 +97,28 @@
             border-left: 5px solid var(--uiuc-orange);
             margin-bottom: 50px;
         }
+        /* Sticky Poster Image */
+        .sticky-poster {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 80px; /* Height of the navbar */
+        }
+        /* News-like Section */
+        .news-section {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffeb3b;
+            padding: 20px;
+            margin: 50px 0;
+        }
+        .news-section h3 {
+            color: #856404;
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <a class="navbar-brand" href="#">
         <!-- UIUC Logo -->
         <img src="path_to_uiuc_logo.png" alt="UIUC Logo" height="40">
@@ -136,22 +152,19 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-5">
+    <div class="container mt-5" style="margin-top: 100px;">
 
         <!-- Poster Title -->
         <h1 class="text-center mb-5">Exploring the Genetic Basis of Spine Evolution in <em>Amaranthus</em></h1>
 
-        <!-- Poster Section -->
+        <!-- Poster and Details Section -->
         <div class="poster-section" id="poster">
             <div class="row">
-                <div class="col-md-6">
-                    <!-- Poster Image -->
-                    <img src="path_to_poster_image.svg" alt="Poster Image" class="poster-img">
-                    <!-- Additional Images Placeholder -->
-                    <img src="path_to_additional_image1.jpg" alt="Additional Image 1" class="additional-img">
-                    <img src="path_to_additional_image2.jpg" alt="Additional Image 2" class="additional-img">
+                <div class="col-md-5">
+                    <!-- Sticky Poster Image -->
+                    <img src="path_to_poster_image.svg" alt="Poster Image" class="poster-img sticky-poster">
                 </div>
-                <div class="col-md-6 poster-details">
+                <div class="col-md-7 poster-details">
                     <!-- Interactive Accordion for Details -->
                     <div id="posterAccordion" class="accordion">
                         <!-- Background -->
@@ -170,55 +183,31 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Description -->
+                        <!-- Methodology (Merged with Research Methods) -->
                         <div class="card">
-                            <div class="card-header" id="headingTwo">
+                            <div class="card-header" id="headingMethodology">
                                 <h2 class="mb-0">
-                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Description
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#posterAccordion">
-                                <div class="card-body">
-                                    <p>Despite their importance, the genetic basis for these adaptations remains largely unexplored. Research on <em>Solanum</em> species recently identified several independent mutations in conserved members of the LONELY GUY (LOG) gene family that regulate prickle development through gene co-option. However, the genetics of spine formation, particularly in weedy species, is still unknown.</p>
-                                    <p><em>A. spinosus</em> offers a valuable model for studying spines, as it is one of the few <em>Amaranthus</em> species to develop these structures and is known for its persistence as a troublesome agricultural weed. Focusing on this species allows us to explore the genetic basis of spine formation and gain insights applicable to weed management.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Research Methods -->
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h2 class="mb-0">
-                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Research Methods
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#posterAccordion">
-                                <div class="card-body">
-                                    <p>Our study investigates the genetic mechanisms behind spine development in <em>Amaranthus</em> by evaluating interspecific crosses between non-spiny <em>Amaranthus palmeri</em> (Palmer amaranth) and <em>A. spinosus</em>. Using a genetic mapping approach that integrates high-throughput sequencing with phenotypic analysis of segregating populations, we aim to identify key loci associated with spine traits.</p>
-                                    <p>Comparative analysis across <em>Amaranthus</em> species will further examine synteny and gene polymorphisms within this genus. Ultimately, this work has the potential to identify genetic targets that could help manage spiny traits, with applications in breeding and weed management.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Methodology -->
-                        <div class="card">
-                            <div class="card-header" id="headingFour">
-                                <h2 class="mb-0">
-                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseMethodology" aria-expanded="false" aria-controls="collapseMethodology">
                                         Methodology
                                     </a>
                                 </h2>
                             </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#posterAccordion">
+                            <div id="collapseMethodology" class="collapse" aria-labelledby="headingMethodology" data-parent="#posterAccordion">
                                 <div class="card-body">
                                     <!-- Methodology Content -->
                                     <h4>Generation of Interspecific Mapping Population</h4>
                                     <p>To study the genetic basis of spine development in <em>Amaranthus</em>, two parental lines were selected: the non-spiny <em>Amaranthus palmeri</em> (Palmer amaranth) and the spiny <em>Amaranthus spinosus</em> (spiny amaranth). Crosses were performed in the PSL glass greenhouse in Urbana, Illinois, to produce F1 hybrids. Advanced backcross generations, such as BC3, will be developed to introgress spine-associated genomic regions from <em>A. spinosus</em> into the <em>A. palmeri</em> genetic background, creating populations segregating for the spine trait (Satterlee et al., 2024).</p>
 
+                                    <!-- Additional Images in Methodology -->
+                                    <img src="path_to_additional_image1.jpg" alt="Crossbreeding Diagram" class="additional-img">
+                                    <p class="text-center"><em>Figure 1: Crossbreeding between A. palmeri and A. spinosus.</em></p>
+
                                     <h4>Phenotyping and Genotyping of Backcross Populations</h4>
                                     <p>Phenotyping of hybrids and backcross progeny will be conducted during vegetative growth stages to identify spine traits. Following phenotyping, DNA will be extracted from leaf tissues of the segregating BC3 population using the SILEX protocol or an equivalent method (Vilanova et al., 2020). DNA quality and quantity will be evaluated using a NanoDrop spectrophotometer, and integrity will be confirmed via agarose gel electrophoresis. For genotyping, RFLP (Restriction Fragment Length Polymorphism) or GBS (Genotyping-by-Sequencing) techniques will be employed to associate spine traits with specific genomic intervals and distinguish between homozygous and heterozygous genotypes (Dai & Long, 2015; He et al., 2014). A fine-mapping approach, yet to be determined, will be used to further refine the loci associated with spine traits.</p>
+
+                                    <!-- Additional Image -->
+                                    <img src="path_to_additional_image2.jpg" alt="DNA Extraction Process" class="additional-img">
+                                    <p class="text-center"><em>Figure 2: DNA extraction and quality assessment.</em></p>
 
                                     <h4>RNA Sequencing</h4>
                                     <p>To analyze gene expression, RNA will be extracted from leaf tissues of spiny and non-spiny individuals using TRIzol or a similar reagent. The RNA will be treated with DNase to remove any genomic DNA contamination, and its purity and concentration will be measured using a NanoDrop spectrophotometer. cDNA synthesis will be carried out using oligo-dT primers, and RT-qPCR will be performed with primers targeting candidate spine-related genes (Nolan et al., 2006). The expression data will be normalized using a housekeeping gene, and relative expression levels will be analyzed using the 2<sup>(-ΔΔCt)</sup> method to compare spiny and non-spiny individuals.</p>
@@ -230,6 +219,25 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Research Questions -->
+                        <div class="card">
+                            <div class="card-header" id="headingResearchQuestions">
+                                <h2 class="mb-0">
+                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseResearchQuestions" aria-expanded="false" aria-controls="collapseResearchQuestions">
+                                        Research Questions
+                                    </a>
+                                </h2>
+                            </div>
+                            <div id="collapseResearchQuestions" class="collapse" aria-labelledby="headingResearchQuestions" data-parent="#posterAccordion">
+                                <div class="card-body">
+                                    <ol>
+                                        <li>What are the key genetic differences between spiny and spineless <em>Amaranthus</em> species?</li>
+                                        <li>Are there specific mutations that correlate with spine gain in cultivated <em>Amaranthus</em> species?</li>
+                                        <li>Are there structural variants or mutations in the regulatory regions of these genes that lead to spine formation?</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- Download Poster Button -->
                     <a href="path_to_full_poster.pdf" class="btn btn-uiuc mt-4" target="_blank">Download Full Poster</a>
@@ -237,21 +245,17 @@
             </div>
         </div>
 
+        <!-- News-like Section -->
+        <div class="news-section">
+            <h3>Did You Know?</h3>
+            <p><strong>Spines, thorns, and prickles are different!</strong> Although they may seem similar, these plant structures differ in their origin and anatomy. Spines are modified leaves, thorns are modified stems, and prickles are extensions of the cortex or epidermis. Understanding these differences is essential in botany and helps in studying plant defense mechanisms.</p>
+        </div>
+
         <!-- Flowchart Section -->
         <div class="flowchart">
             <h2>Research Workflow</h2>
             <!-- Flowchart Image Placeholder -->
             <img src="path_to_flowchart_image.png" alt="Research Workflow Flowchart" class="poster-img">
-        </div>
-
-        <!-- Research Questions Section -->
-        <div class="poster-section research-questions" id="research-questions">
-            <h2>Research Questions</h2>
-            <ol>
-                <li>What are the key genetic differences between spiny and spineless <em>Amaranthus</em> species?</li>
-                <li>Are there specific mutations that correlate with spine gain in cultivated <em>Amaranthus</em> species?</li>
-                <li>Are there structural variants or mutations in the regulatory regions of these genes that lead to spine formation?</li>
-            </ol>
         </div>
 
         <!-- Contributors Section -->
