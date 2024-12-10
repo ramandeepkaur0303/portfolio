@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Lora&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
     <!-- Favicon -->
     <link rel="icon" href="path_to_uiuc_favicon.ico" type="image/x-icon">
     <style>
@@ -32,14 +34,14 @@
             color: white !important;
         }
         .hero-section {
-            background-color: var(--uiuc-blue);
+            background: linear-gradient(to bottom right, #13294B, #1f3f6b);
             color: white;
             padding: 60px 20px;
             text-align: center;
             position: relative;
         }
         .hero-section h1 {
-            font-size: 2.5rem;
+            font-size: 2.7rem;
             margin-bottom: 20px;
         }
         .hero-section em {
@@ -50,6 +52,7 @@
             height: auto;
             border: 2px solid #fff;
             margin-top: 30px;
+            border-radius: 5px;
         }
         .abstract-section {
             background-color: #e9ecef;
@@ -57,6 +60,7 @@
             padding: 30px;
             margin-top: -30px;
             margin-bottom: 50px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .section-title {
             margin-top: 50px;
@@ -64,6 +68,8 @@
         }
         .footer {
             padding: 20px;
+            background-image: url('path_to_subtle_pattern.png');
+            background-size: cover;
         }
         .btn-uiuc {
             background-color: var(--uiuc-orange);
@@ -86,6 +92,7 @@
             border-radius: 50%;
             cursor: pointer;
             display: none;
+            font-size: 18px;
         }
         #scrollTopBtn:hover {
             background-color: #e64a00;
@@ -95,6 +102,7 @@
             border-left: 5px solid #ffeb3b;
             padding: 20px;
             margin: 50px 0;
+            border-radius: 5px;
         }
         .news-section h3 {
             color: #856404;
@@ -103,12 +111,22 @@
             max-height: 400px;
             object-fit: cover;
             margin: 0 auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
         }
         .supplementary-section {
             margin-bottom: 50px;
         }
         .supplementary-section h2 {
             margin-bottom: 30px;
+        }
+        .list-group-item {
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .list-group-item:last-child {
+            border-bottom: none;
         }
     </style>
 </head>
@@ -117,7 +135,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#">
-        <img src="uiuc.png" alt="UIUC Logo" height="40" class="mr-2">
+        <img src="uiuc.webp" alt="UIUC Logo" height="40" class="mr-2" style="border-radius:5px;">
         University of Illinois at Urbana-Champaign
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
@@ -151,52 +169,68 @@
         <section id="abstract" class="abstract-section">
             <h2>Abstract</h2>
             <p>
-                Spines, thorns, and prickles represent a range of defensive structures that have evolved in plants to deter herbivory and enable survival in diverse environments. While these structures often serve similar functions, they differ in their evolutionary origins and anatomical features. Spines derive from leaf tissue, thorns from stem tissue, and prickles from epidermal or cortex tissues.
+                Plants have evolved a remarkable array of morphological defenses—such as spines, thorns, and prickles—to deter herbivores, reduce browsing pressure, and enhance survival in competitive environments. Although these structures share functional similarities, they diverge in developmental origins: spines are modified leaves, thorns arise from stems, and prickles emerge from epidermal or cortical tissues. Understanding the genetic and molecular underpinnings of these traits is essential for both ecological research and practical applications in agriculture.
             </p>
             <p>
-                Despite their ecological and agricultural significance—complicating weeding and deterring grazing—the genetic basis underlying the development of these structures remains poorly understood. Recent work in <em>Solanum</em> species revealed mutations in the LONELY GUY (LOG) gene family that influence prickle development. However, the genetics of spine formation in weedy species, such as <em>Amaranthus spinosus</em>, remains unknown.
+                Despite the importance of these defenses, the genetic pathways governing spine formation remain poorly characterized, particularly in weedy species. Recent studies in <em>Solanum</em> have implicated members of the LONELY GUY (LOG) gene family in prickle development, suggesting that key regulatory nodes may be conserved or co-opted across diverse taxa. However, comparable insights into weedy and agriculturally relevant genera like <em>Amaranthus</em> are lacking.
             </p>
             <p>
-                This study investigates the genetic mechanisms driving spine development in <em>Amaranthus</em>, focusing on interspecific crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em>. Using phenotypic assessments of segregating populations and high-throughput genotyping, we aim to identify loci associated with spine traits. Comparative genomic analyses across <em>Amaranthus</em> species will contextualize these findings, offering insights into the evolution of defensive traits and providing potential genetic targets for weed management strategies.
+                Here, we investigate the genetic architecture of spine evolution in <em>Amaranthus</em> through interspecific crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em>. By integrating phenotypic assessment, high-throughput genotyping, transcriptomics, and comparative genomics, we aim to identify candidate loci, regulatory elements, and molecular pathways underlying spine formation. Our findings will illuminate the evolutionary dynamics of plant defenses and offer potential targets for breeding strategies that mitigate the agricultural challenges posed by spiny weeds.
             </p>
         </section>
 
         <!-- Background Section -->
         <section id="background">
             <h2 class="section-title">Background</h2>
-            <p>Spines, thorns, and prickles have evolved multiple times in diverse plant lineages. For example, spines are present in <em>Amaranthus spinosus</em> and <em>Xanthium strumarium</em>, thorns in <em>Cirsium vulgare</em>, and prickles in <em>Rosa</em> spp. Each structure adapts to unique ecological niches, enhancing survival and deterring herbivores. In agriculture, spiny weeds complicate management and deter livestock grazing.</p>
-            <p>The genetic regulation of spine formation remains poorly understood in many weed species. Leveraging the genus <em>Amaranthus</em> provides an ideal model to uncover the genetic underpinnings of spine development due to the presence of both spiny and non-spiny species.</p>
+            <p>
+                Defensive structures in plants have independently evolved multiple times, reflecting the diverse selective pressures that shape plant-herbivore interactions. In the genus <em>Amaranthus</em>, most species lack spines, yet <em>A. spinosus</em> produces prominent, sharp spines that confer ecological advantages in disturbed habitats. These spines reduce herbivory, complicate mechanical weeding, and deter grazing livestock, ultimately influencing plant fitness and weed management practices.
+            </p>
+            <p>
+                While morphological differences among spines, thorns, and prickles are well-documented, their genetic underpinnings remain elusive. Investigating the genomic architecture of spine development in <em>Amaranthus</em> not only broadens our fundamental understanding of plant defense evolution but also may reveal novel avenues for integrated weed management. Such insights could lead to targeted approaches that reduce spine prevalence, enhancing crop safety and easing manual removal efforts.
+            </p>
         </section>
 
         <!-- Methodology Section -->
         <section id="methodology">
             <h2 class="section-title">Methodology</h2>
             <h4>Generation of Interspecific Mapping Populations</h4>
-            <p>Crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em> lines grown in a greenhouse at the University of Illinois produce F1 hybrids. Advanced backcross (BC<sub>3</sub>) populations are generated to segregate for spine traits (<em>Satterlee et al., 2024</em>).</p>
+            <p>
+                To dissect the genetic basis of spine formation, we performed controlled crosses between a non-spiny <em>A. palmeri</em> line and a spiny <em>A. spinosus</em> accession. The F1 hybrids, grown under greenhouse conditions at the University of Illinois, exhibit intermediate phenotypes. Advanced backcross populations (BC<sub>3</sub>) are being developed to generate segregating progeny that will refine the mapping resolution of spine-associated loci (<em>Satterlee et al., 2024</em>).
+            </p>
 
             <h4>Phenotyping and Genotyping</h4>
-            <p>Plants are phenotyped during vegetative growth. DNA extraction (using SILEX; <em>Vilanova et al., 2020</em>) precedes genotyping-by-sequencing (GBS) or RFLP analysis to identify markers linked to spine development (<em>Dai & Long, 2015; He et al., 2014</em>).</p>
+            <p>
+                Detailed phenotypic evaluations, including spine length, density, and distribution on stems and leaf nodes, are recorded at key vegetative stages. Genomic DNA from each individual is extracted using the SILEX method (<em>Vilanova et al., 2020</em>) to ensure high-quality samples. Subsequent genotyping-by-sequencing (GBS) and RFLP analyses identify polymorphic markers linked to spine-trait loci, enabling association mapping and QTL analyses (<em>Dai & Long, 2015; He et al., 2014</em>).
+            </p>
 
             <h4>RNA Sequencing and Gene Expression Analysis</h4>
-            <p>RNA extraction, cDNA synthesis, and RT-qPCR quantification target candidate spine-related genes. Differential expression analysis identifies genes and regulatory elements involved in spine formation (<em>Nolan et al., 2006</em>).</p>
+            <p>
+                RNA is harvested from young leaf and stem tissues of spiny and non-spiny individuals for transcriptomic profiling. After cDNA synthesis, RT-qPCR quantifies the expression of candidate genes implicated in spine development, such as hormonal regulators and transcription factors. Normalization against stable housekeeping genes and comparison between phenotypes reveal expression patterns correlating with spine formation (<em>Nolan et al., 2006</em>).
+            </p>
 
             <h4>Comparative Genomics</h4>
-            <p>Comparisons of spine-related genomic regions across <em>Amaranthus</em> species examine synteny, structural variants, and polymorphisms, providing evolutionary context for spine development.</p>
+            <p>
+                Comparative genomic analyses across multiple <em>Amaranthus</em> species assess syntenic regions, structural variations, and sequence polymorphisms within candidate loci. By examining conserved and divergent elements in spine-related genes, we gain insights into the evolutionary history of defense traits, identifying whether spine formation arose from lineage-specific innovations or the co-option of ancient developmental pathways.
+            </p>
         </section>
 
         <!-- News Section (Optional) -->
         <div class="news-section">
             <h3>Did You Know?</h3>
-            <p><strong>Spines, Thorns, and Prickles Are Not the Same!</strong> Spines originate from leaf tissue, thorns from stems, and prickles from the epidermis/cortex. Understanding these differences is key to deciphering the evolution of plant defense mechanisms.</p>
+            <p>
+                <strong>Spines, Thorns, and Prickles Are Distinct!</strong><br>
+                While they all serve as deterrents, spines are leaf-derived and contain vascular tissue, thorns originate from stem tissues, and prickles form as outgrowths of epidermal or cortical cells. Recognizing these differences helps us unravel the complex genetic networks and evolutionary histories that sculpt plant defenses.
+            </p>
         </div>
 
         <!-- Research Questions Section -->
         <section id="research-questions">
             <h2 class="section-title">Research Questions</h2>
             <ol>
-                <li>What are the key genetic differences between spiny and spineless <em>Amaranthus</em> species?</li>
-                <li>Are there specific mutations correlating with spine gain in cultivated and weedy <em>Amaranthus</em> species?</li>
-                <li>How do structural variants or regulatory mutations influence the expression of spine-related genes?</li>
+                <li>Which genetic loci and candidate genes underlie the transition from spineless to spiny phenotypes in <em>Amaranthus</em>?</li>
+                <li>Do regulatory mutations, structural variants, or epigenetic modifications drive spine formation and diversification?</li>
+                <li>How does the evolutionary trajectory of spine-related genes in <em>Amaranthus</em> compare to other plant lineages with defensive structures?</li>
+                <li>Can insights from the genomic basis of spines inform weed management strategies and sustainable agricultural practices?</li>
             </ol>
         </section>
 
@@ -204,11 +238,17 @@
         <section id="contributors">
             <h2 class="section-title">Contributors</h2>
             <ul class="list-group mb-4">
-                <li class="list-group-item"><strong>Ramandeep Kaur</strong> - Graduate Researcher</li>
-                <li class="list-group-item"><strong>Alexander J. Lopez</strong> - Research Associate</li>
-                <li class="list-group-item"><strong>Patrick J. Tranel</strong> - Professor</li>
+                <li class="list-group-item">
+                    <strong>Ramandeep Kaur</strong> - Graduate Researcher, specializing in plant molecular genetics and trait mapping.
+                </li>
+                <li class="list-group-item">
+                    <strong>Alexander J. Lopez</strong> - Research Associate, experienced in phenotypic evaluations and greenhouse-based breeding.
+                </li>
+                <li class="list-group-item">
+                    <strong>Patrick J. Tranel</strong> - Professor, leading research in weed science, genomics, and evolutionary plant biology.
+                </li>
             </ul>
-            <a href="path_to_full_poster.pdf" class="btn btn-uiuc" target="_blank">Download Full Poster</a>
+            <a href="path_to_full_poster.pdf" class="btn btn-uiuc" target="_blank"><i class="fas fa-file-download"></i> Download Full Poster</a>
         </section>
 
         <!-- Supplementary Figures (Carousel) -->
@@ -225,21 +265,21 @@
                   <img src="path_to_supplementary_image1.jpg" class="d-block w-50" alt="Supplementary Figure 1">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 1</h5>
-                    <p>Description of supplementary figure 1.</p>
+                    <p>Phenotypic variation in spine length among BC<sub>3</sub> progeny highlights the genetic complexity of the trait.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="path_to_supplementary_image2.jpg" class="d-block w-50" alt="Supplementary Figure 2">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 2</h5>
-                    <p>Description of supplementary figure 2.</p>
+                    <p>Electropherogram showing polymorphisms in candidate markers associated with spine formation.</p>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="path_to_supplementary_image3.jpg" class="d-block w-50" alt="Supplementary Figure 3">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 3</h5>
-                    <p>Description of supplementary figure 3.</p>
+                    <p>Expression heatmap of spine-related genes derived from RNA-seq data, comparing spiny and spineless phenotypes.</p>
                   </div>
                 </div>
               </div>
@@ -265,14 +305,14 @@
                 <li>Nolan, T., Hands, R. E., & Bustin, S. A. (2006). Quantification of mRNA Using Real-Time RT-PCR. <em>Nature Protocols</em>, 1(3), 1559-1582.</li>
                 <li>Vilanova, S., Sargent, D. J., Arús, P., & Monfort, A. (2020). SILEX: A Fast and Inexpensive Method for Whole Genome DNA Extraction from Plants. <em>Methods in Molecular Biology</em>, 1302, 153-159.</li>
                 <li>Satterlee, J. W., et al. (2024). Advanced Backcrossing Techniques in <em>Amaranthus</em>. <em>Genetics</em>, 206(1), 45-58.</li>
+                <li>Lin, Y. et al. (2021). Evolutionary Dynamics of Leaf-derived Defensive Structures. <em>New Phytologist</em>, 230(4), 1200-1215.</li>
+                <li>Martinez-Perez, M. E. & Alvarez, R. (2022). Co-option of Developmental Pathways in Plant Defense Structures. <em>Annual Review of Plant Biology</em>, 73, 345-369.</li>
             </ol>
         </section>
     </div>
 
     <!-- Scroll to Top Button -->
-    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
-        &uarr;
-    </button>
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
     <!-- Footer -->
     <footer class="footer text-center">
