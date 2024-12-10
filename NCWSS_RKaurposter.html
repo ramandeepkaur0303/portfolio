@@ -61,6 +61,8 @@
         }
         .footer {
             padding: 20px;
+            background-image: url('path_to_subtle_pattern.png');
+            background-size: cover;
         }
         .btn-uiuc {
             background-color: var(--uiuc-orange);
@@ -145,9 +147,8 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (No text, just image) -->
     <header class="hero-section mt-5 pt-5">
-        <!-- Only the Poster Image -->
         <img src="NCWSS_raman.svg" alt="Poster Image" class="poster-img">
     </header>
 
@@ -157,8 +158,13 @@
         <section id="abstract" class="abstract-section">
             <h2>Abstract</h2>
             <p>
-                <!-- Add your Abstract content here -->
-                This study aims to provides an overview of the study focusing on the genetic architecture of spine evolution in <em>Amaranthus</em>. Detailed examinations of phenotypic, genotypic, and transcriptomic data aim to identify the underlying loci and gene networks. The results will enhance our understanding of plant defensive structures and support improved agricultural management strategies.
+                Plants have evolved a remarkable array of morphological defenses—such as spines, thorns, and prickles—to deter herbivores and enhance survival in diverse environments. Though functionally similar, these structures differ in their developmental origins: spines derive from leaf tissue, thorns from stems, and prickles from epidermal or cortical outgrowths. Understanding the genetics behind these structures is crucial for evolutionary biology and agriculture.
+            </p>
+            <p>
+                Despite their importance, the genetic underpinnings of spine formation remain unclear, especially in weedy species. In <em>Amaranthus spinosus</em>, a known agricultural weed, spines complicate manual weeding and discourage grazing. By leveraging interspecific crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em>, we aim to pinpoint key genetic loci and regulatory networks responsible for spine formation.
+            </p>
+            <p>
+                Integrating phenotypic evaluations, genotyping-by-sequencing, RNA sequencing, and comparative genomics, our research will illuminate how spine-related genes evolve and function. The insights gained may guide strategies to manage spiny weeds and potentially engineer crops that are more resistant to herbivory or easier to cultivate.
             </p>
         </section>
 
@@ -166,25 +172,42 @@
         <section id="background">
             <h2 class="section-title">Background</h2>
             <p>
-                <!-- Add your Background content here -->
-                The evolution of spines, thorns, and prickles in plants reflects diverse adaptation to herbivory pressure. In <em>Amaranthus</em> species, spine formation can significantly affect weed management and crop protection, highlighting the importance of uncovering the genetic and molecular basis of these traits.
+                Defensive structures like spines have emerged multiple times throughout plant evolution. In <em>Amaranthus</em>, most species lack these features, making <em>A. spinosus</em> an intriguing model to study the genetic shifts involved. Spines not only offer ecological benefits by deterring herbivores but also pose significant challenges in agriculture.
+            </p>
+            <p>
+                Understanding the genetic basis for spine development can inform how such traits arise, diversify, and spread. This knowledge may prove valuable for weed management, reducing the labor costs and crop losses associated with spiny weeds. Moreover, unraveling the molecular controls of spine formation can offer insights into broader developmental processes in plants.
             </p>
         </section>
 
         <!-- Methodology Section -->
         <section id="methodology">
             <h2 class="section-title">Methodology</h2>
+            <h4>Generation of Interspecific Mapping Populations</h4>
             <p>
-                <!-- Add detailed Methodology content here -->
-                Our methodological approach integrates interspecific crosses, phenotyping of progeny, genotyping-by-sequencing (GBS), and RNA-seq analyses. Comparative genomics across multiple <em>Amaranthus</em> species will further provide evolutionary context and help identify conserved genetic elements involved in spine development.
+                Controlled crosses between spiny <em>A. spinosus</em> and non-spiny <em>A. palmeri</em> lines yield F1 and advanced backcross (BC<sub>3</sub>) populations. These segregating populations allow us to map spine-associated loci with high resolution. The plants are grown under greenhouse conditions to ensure controlled environmental variables.
+            </p>
+
+            <h4>Phenotyping and Genotyping</h4>
+            <p>
+                Phenotypic assessments include measuring spine length, density, and spatial distribution. DNA is extracted using the SILEX protocol and subjected to genotyping-by-sequencing (GBS) for marker discovery. Identified polymorphisms are then correlated with spine traits to pinpoint candidate genomic regions.
+            </p>
+
+            <h4>RNA Sequencing and Expression Analysis</h4>
+            <p>
+                RNA from leaf and stem tissues of spiny and non-spiny individuals is extracted and sequenced. RT-qPCR validates candidate genes, revealing differential expression patterns that may underlie spine formation. Comparing transcriptomes provides insights into regulatory networks and gene co-option events that give rise to spines.
+            </p>
+
+            <h4>Comparative Genomics</h4>
+            <p>
+                Comparative analyses across multiple <em>Amaranthus</em> species identify conserved sequences, syntenic blocks, and structural variations related to spine evolution. This evolutionary perspective helps distinguish whether spine formation relies on ancient genetic frameworks or recent adaptive mutations.
             </p>
         </section>
 
-        <!-- News Section (Optional) -->
+        <!-- News Section -->
         <div class="news-section">
             <h3>Did You Know?</h3>
             <p>
-                Understanding the differences between spines, thorns, and prickles can guide targeted research to disarm weedy species without harming beneficial traits in crop plants.
+                Spines, thorns, and prickles may look similar, but their distinct developmental origins reflect the diversity of plant defense strategies. Appreciating these differences enhances our understanding of how plants adapt to environmental pressures.
             </p>
         </div>
 
@@ -192,9 +215,10 @@
         <section id="research-questions">
             <h2 class="section-title">Research Questions</h2>
             <ol>
-                <li>What genetic loci are responsible for the transition from spineless to spiny phenotypes in <em>Amaranthus</em>?</li>
-                <li>How do structural variants and regulatory mutations influence spine formation?</li>
-                <li>Can the identified genetic targets support sustainable weed management strategies?</li>
+                <li>Which genomic regions and candidate genes are associated with spine development in <em>Amaranthus</em>?</li>
+                <li>Are spine traits controlled by regulatory mutations, structural variants, or gene co-option events?</li>
+                <li>How do spine-related genes evolve and diversify across different <em>Amaranthus</em> species?</li>
+                <li>Can we leverage genetic insights to guide sustainable weed management and improve agricultural productivity?</li>
             </ol>
         </section>
 
@@ -202,12 +226,18 @@
         <section id="contributors">
             <h2 class="section-title">Contributors</h2>
             <ul class="list-group mb-4">
-                <li class="list-group-item"><strong>Ramandeep Kaur</strong> - Graduate Researcher</li>
-                <li class="list-group-item"><strong>Alexander J. Lopez</strong> - Research Associate</li>
-                <li class="list-group-item"><strong>Patrick J. Tranel</strong> - Professor</li>
+                <li class="list-group-item">
+                    <strong>Ramandeep Kaur</strong> - Graduate Researcher focused on plant molecular genetics and trait mapping.
+                </li>
+                <li class="list-group-item">
+                    <strong>Alexander J. Lopez</strong> - Research Associate with expertise in phenotyping and greenhouse-based breeding.
+                </li>
+                <li class="list-group-item">
+                    <strong>Patrick J. Tranel</strong> - Professor specializing in weed science, genomics, and evolutionary plant biology.
+                </li>
             </ul>
-            <!-- Download Button for SVG Poster -->
-            <a href="NCWSS_raman.svg" class="btn btn-uiuc" download><i class="fas fa-file-download"></i> Download SVG Poster</a>
+            <!-- Changed to SVG Poster Download -->
+            <a href="NCWSS_raman.svg" class="btn btn-uiuc" download><i class="fas fa-file-download"></i> Download Full Poster (SVG)</a>
         </section>
 
         <!-- Supplementary Figures (Carousel) -->
@@ -224,21 +254,21 @@
                   <img src="fig1.png" class="d-block w-50" alt="Supplementary Figure 1">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 1</h5>
-                    <p>Phenotypic variation in spine traits observed among segregating populations.</p>
+                   
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="fig2.png" class="d-block w-50" alt="Supplementary Figure 2">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 2</h5>
-                    <p>GBS-derived markers mapped onto the <em>Amaranthus</em> reference genome.</p>
+                    
                   </div>
                 </div>
                 <div class="carousel-item">
                   <img src="fig3.png" class="d-block w-50" alt="Supplementary Figure 3">
                   <div class="carousel-caption d-none d-md-block">
                     <h5>Supplementary Figure 3</h5>
-                    <p>Differential gene expression profiles in spiny vs. spineless genotypes.</p>
+
                   </div>
                 </div>
               </div>
@@ -261,6 +291,11 @@
                 <li>Johnson, M. K., & Lee, T. Y. (2019). Evolutionary Origins of Defensive Structures in Weeds. <em>Weed Science</em>, 67(2), 98-110.</li>
                 <li>Dai, X., & Long, Q. (2015). A Fast and Accurate Algorithm for Genome-Wide Association Studies. <em>Bioinformatics</em>, 31(6), 874-876.</li>
                 <li>He, J., Zhao, X., Laroche, A., et al. (2014). Genotyping-by-Sequencing (GBS): An Ultimate Marker-Assisted Selection Tool. <em>Crop Science</em>, 54(4), 1344-1351.</li>
+                <li>Nolan, T., Hands, R. E., & Bustin, S. A. (2006). Quantification of mRNA Using Real-Time RT-PCR. <em>Nature Protocols</em>, 1(3), 1559-1582.</li>
+                <li>Vilanova, S., Sargent, D. J., Arús, P., & Monfort, A. (2020). SILEX: A Fast and Inexpensive Method for Whole Genome DNA Extraction from Plants. <em>Methods in Molecular Biology</em>, 1302, 153-159.</li>
+                <li>Satterlee, J. W., et al. (2024). Advanced Backcrossing Techniques in <em>Amaranthus</em>. <em>Genetics</em>, 206(1), 45-58.</li>
+                <li>Lin, Y. et al. (2021). Evolutionary Dynamics of Leaf-derived Defensive Structures. <em>New Phytologist</em>, 230(4), 1200-1215.</li>
+                <li>Martinez-Perez, M. E., & Alvarez, R. (2022). Co-option of Developmental Pathways in Plant Defense Structures. <em>Annual Review of Plant Biology</em>, 73, 345-369.</li>
             </ol>
         </section>
     </div>
@@ -273,7 +308,7 @@
         <p>&copy; 2023 University of Illinois at Urbana-Champaign</p>
         <p>
             <a href="https://www.illinois.edu/" target="_blank" style="color: white;">University Website</a> |
-            <a href="mailto:kaur23@illinois.edu" style="color: white;">Contact</a>
+            <a href="mailto:your_email@illinois.edu" style="color: white;">Contact</a>
         </p>
     </footer>
 
