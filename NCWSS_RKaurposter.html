@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Exploring the Genetic Basis of Spine Evolution in Amaranthus">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploring the Genetic Basis of Spine Evolution in Amaranthus</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <!-- UIUC Theme Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Lora" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Lora&display=swap" rel="stylesheet">
     <!-- Favicon -->
     <link rel="icon" href="path_to_uiuc_favicon.ico" type="image/x-icon">
-    <!-- Custom CSS -->
     <style>
-        /* UIUC Colors */
         :root {
             --uiuc-orange: #FF5A00;
             --uiuc-blue: #13294B;
@@ -20,20 +20,50 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
         }
-        .navbar {
+        header, nav, footer {
             background-color: var(--uiuc-blue);
+            color: white;
         }
-        .navbar-brand, .nav-link, .footer {
+        h1, h2, h3, h4 {
+            font-family: 'Lora', serif;
+            color: var(--uiuc-blue);
+        }
+        .nav-link {
             color: white !important;
         }
-        .footer {
+        .hero-section {
             background-color: var(--uiuc-blue);
-            padding: 20px;
-            margin-top: 50px;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
         }
-        h1, h2, h3 {
-            color: var(--uiuc-blue);
-            font-family: 'Lora', serif;
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .hero-section em {
+            font-style: italic;
+        }
+        .hero-section img.poster-img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #fff;
+            margin-top: 30px;
+        }
+        .abstract-section {
+            background-color: #e9ecef;
+            border-left: 5px solid var(--uiuc-orange);
+            padding: 30px;
+            margin-top: -30px;
+            margin-bottom: 50px;
+        }
+        .section-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .footer {
+            padding: 20px;
         }
         .btn-uiuc {
             background-color: var(--uiuc-orange);
@@ -42,30 +72,6 @@
         .btn-uiuc:hover {
             background-color: #e64a00;
             color: white;
-        }
-        .poster-img, .additional-img {
-            width: 100%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-        .poster-section {
-            margin-bottom: 50px;
-        }
-        .poster-details {
-            padding: 20px;
-        }
-        /* Interactive Accordion */
-        .accordion .card-header {
-            background-color: var(--uiuc-blue);
-            color: white;
-        }
-        .accordion .card-header a {
-            color: white;
-            text-decoration: none;
-        }
-        .accordion .card-body {
-            background-color: #e9ecef;
         }
         /* Scroll to Top Button */
         #scrollTopBtn {
@@ -76,7 +82,6 @@
             background-color: var(--uiuc-orange);
             color: white;
             border: none;
-            outline: none;
             padding: 10px 15px;
             border-radius: 50%;
             cursor: pointer;
@@ -85,25 +90,6 @@
         #scrollTopBtn:hover {
             background-color: #e64a00;
         }
-        /* Flowchart Styling */
-        .flowchart {
-            text-align: center;
-            margin: 40px 0;
-        }
-        /* Research Questions Styling */
-        .research-questions {
-            background-color: #e9ecef;
-            padding: 20px;
-            border-left: 5px solid var(--uiuc-orange);
-            margin-bottom: 50px;
-        }
-        /* Sticky Poster Image */
-        .sticky-poster {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 80px; /* Height of the navbar */
-        }
-        /* News-like Section */
         .news-section {
             background-color: #fff3cd;
             border-left: 5px solid #ffeb3b;
@@ -113,182 +99,174 @@
         .news-section h3 {
             color: #856404;
         }
+        .carousel-item img {
+            max-height: 400px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        .supplementary-section {
+            margin-bottom: 50px;
+        }
+        .supplementary-section h2 {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <a class="navbar-brand" href="#">
-        <!-- UIUC Logo -->
-        <img src="path_to_uiuc_logo.png" alt="UIUC Logo" height="40">
+        <img src="uiuc.png" alt="UIUC Logo" height="40" class="mr-2">
         University of Illinois at Urbana-Champaign
       </a>
-      <!-- Navbar Toggle for Mobile -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <!-- Add more navigation items here if needed -->
-          <li class="nav-item">
-            <a class="nav-link" href="#poster">Poster</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#methodology">Methodology</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#research-questions">Research Questions</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contributors">Contributors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#references">References</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#abstract">Abstract</a></li>
+          <li class="nav-item"><a class="nav-link" href="#background">Background</a></li>
+          <li class="nav-item"><a class="nav-link" href="#methodology">Methodology</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research-questions">Research Questions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contributors">Contributors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#supplementary">Supplementary Figures</a></li>
+          <li class="nav-item"><a class="nav-link" href="#references">References</a></li>
         </ul>
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container mt-5" style="margin-top: 100px;">
+    <!-- Hero Section -->
+    <header class="hero-section mt-5 pt-5">
+        <h1>Exploring the Genetic Basis of Spine Evolution in <em>Amaranthus</em></h1>
+        <p>Ramandeep Kaur<sup>1</sup>, Alexander J. Lopez<sup>1</sup>, Patrick J. Tranel<sup>1</sup></p>
+        <p><small><sup>1</sup>University of Illinois at Urbana-Champaign, Urbana, IL</small></p>
+        <!-- Featured Poster Image -->
+        <img src="NCWSS_raman.svg" alt="Poster Image" class="poster-img">
+    </header>
 
-        <!-- Poster Title -->
-        <h1 class="text-center mb-5">Exploring the Genetic Basis of Spine Evolution in <em>Amaranthus</em></h1>
+    <div class="container" style="margin-top: 100px;">
 
-        <!-- Poster and Details Section -->
-        <div class="poster-section" id="poster">
-            <div class="row">
-                <div class="col-md-5">
-                    <!-- Sticky Poster Image -->
-                    <img src="path_to_poster_image.svg" alt="Poster Image" class="poster-img sticky-poster">
-                </div>
-                <div class="col-md-7 poster-details">
-                    <!-- Interactive Accordion for Details -->
-                    <div id="posterAccordion" class="accordion">
-                        <!-- Background -->
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                    <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Background
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#posterAccordion">
-                                <div class="card-body">
-                                    <p>Spines, thorns, and prickles represent a range of defensive structures co-evolved in many plants to deter herbivory and survive in diverse environments. Though these structures often serve similar functions, they differ in evolutionary origin: spines develop from leaf tissue and thorns from stem tissue, both containing vascular tissue, while prickles arise from epidermal or cortex tissue and lack vascular tissue.</p>
-                                    <p>This morphological diversity is reflected in various weedy species, with spines in <em>Amaranthus spinosus</em> (spiny amaranth) and <em>Xanthium strumarium</em> (common cocklebur), thorns in <em>Cirsium vulgare</em> (common thistle), and prickles in <em>Rosa</em> spp. (roses) — each adapted to specific ecological niches. These structures complicate manual weeding in agriculture and deter livestock grazing, presenting a significant nuisance in crop fields.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Methodology (Merged with Research Methods) -->
-                        <div class="card">
-                            <div class="card-header" id="headingMethodology">
-                                <h2 class="mb-0">
-                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseMethodology" aria-expanded="false" aria-controls="collapseMethodology">
-                                        Methodology
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="collapseMethodology" class="collapse" aria-labelledby="headingMethodology" data-parent="#posterAccordion">
-                                <div class="card-body">
-                                    <!-- Methodology Content -->
-                                    <h4>Generation of Interspecific Mapping Population</h4>
-                                    <p>To study the genetic basis of spine development in <em>Amaranthus</em>, two parental lines were selected: the non-spiny <em>Amaranthus palmeri</em> (Palmer amaranth) and the spiny <em>Amaranthus spinosus</em> (spiny amaranth). Crosses were performed in the PSL glass greenhouse in Urbana, Illinois, to produce F1 hybrids. Advanced backcross generations, such as BC3, will be developed to introgress spine-associated genomic regions from <em>A. spinosus</em> into the <em>A. palmeri</em> genetic background, creating populations segregating for the spine trait (Satterlee et al., 2024).</p>
+        <!-- Abstract Section -->
+        <section id="abstract" class="abstract-section">
+            <h2>Abstract</h2>
+            <p>
+                Spines, thorns, and prickles represent a range of defensive structures that have evolved in plants to deter herbivory and enable survival in diverse environments. While these structures often serve similar functions, they differ in their evolutionary origins and anatomical features. Spines derive from leaf tissue, thorns from stem tissue, and prickles from epidermal or cortex tissues.
+            </p>
+            <p>
+                Despite their ecological and agricultural significance—complicating weeding and deterring grazing—the genetic basis underlying the development of these structures remains poorly understood. Recent work in <em>Solanum</em> species revealed mutations in the LONELY GUY (LOG) gene family that influence prickle development. However, the genetics of spine formation in weedy species, such as <em>Amaranthus spinosus</em>, remains unknown.
+            </p>
+            <p>
+                This study investigates the genetic mechanisms driving spine development in <em>Amaranthus</em>, focusing on interspecific crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em>. Using phenotypic assessments of segregating populations and high-throughput genotyping, we aim to identify loci associated with spine traits. Comparative genomic analyses across <em>Amaranthus</em> species will contextualize these findings, offering insights into the evolution of defensive traits and providing potential genetic targets for weed management strategies.
+            </p>
+        </section>
 
-                                    <!-- Additional Images in Methodology -->
-                                    <img src="path_to_additional_image1.jpg" alt="Crossbreeding Diagram" class="additional-img">
-                                    <p class="text-center"><em>Figure 1: Crossbreeding between A. palmeri and A. spinosus.</em></p>
+        <!-- Background Section -->
+        <section id="background">
+            <h2 class="section-title">Background</h2>
+            <p>Spines, thorns, and prickles have evolved multiple times in diverse plant lineages. For example, spines are present in <em>Amaranthus spinosus</em> and <em>Xanthium strumarium</em>, thorns in <em>Cirsium vulgare</em>, and prickles in <em>Rosa</em> spp. Each structure adapts to unique ecological niches, enhancing survival and deterring herbivores. In agriculture, spiny weeds complicate management and deter livestock grazing.</p>
+            <p>The genetic regulation of spine formation remains poorly understood in many weed species. Leveraging the genus <em>Amaranthus</em> provides an ideal model to uncover the genetic underpinnings of spine development due to the presence of both spiny and non-spiny species.</p>
+        </section>
 
-                                    <h4>Phenotyping and Genotyping of Backcross Populations</h4>
-                                    <p>Phenotyping of hybrids and backcross progeny will be conducted during vegetative growth stages to identify spine traits. Following phenotyping, DNA will be extracted from leaf tissues of the segregating BC3 population using the SILEX protocol or an equivalent method (Vilanova et al., 2020). DNA quality and quantity will be evaluated using a NanoDrop spectrophotometer, and integrity will be confirmed via agarose gel electrophoresis. For genotyping, RFLP (Restriction Fragment Length Polymorphism) or GBS (Genotyping-by-Sequencing) techniques will be employed to associate spine traits with specific genomic intervals and distinguish between homozygous and heterozygous genotypes (Dai & Long, 2015; He et al., 2014). A fine-mapping approach, yet to be determined, will be used to further refine the loci associated with spine traits.</p>
+        <!-- Methodology Section -->
+        <section id="methodology">
+            <h2 class="section-title">Methodology</h2>
+            <h4>Generation of Interspecific Mapping Populations</h4>
+            <p>Crosses between non-spiny <em>A. palmeri</em> and spiny <em>A. spinosus</em> lines grown in a greenhouse at the University of Illinois produce F1 hybrids. Advanced backcross (BC<sub>3</sub>) populations are generated to segregate for spine traits (<em>Satterlee et al., 2024</em>).</p>
 
-                                    <!-- Additional Image -->
-                                    <img src="path_to_additional_image2.jpg" alt="DNA Extraction Process" class="additional-img">
-                                    <p class="text-center"><em>Figure 2: DNA extraction and quality assessment.</em></p>
+            <h4>Phenotyping and Genotyping</h4>
+            <p>Plants are phenotyped during vegetative growth. DNA extraction (using SILEX; <em>Vilanova et al., 2020</em>) precedes genotyping-by-sequencing (GBS) or RFLP analysis to identify markers linked to spine development (<em>Dai & Long, 2015; He et al., 2014</em>).</p>
 
-                                    <h4>RNA Sequencing</h4>
-                                    <p>To analyze gene expression, RNA will be extracted from leaf tissues of spiny and non-spiny individuals using TRIzol or a similar reagent. The RNA will be treated with DNase to remove any genomic DNA contamination, and its purity and concentration will be measured using a NanoDrop spectrophotometer. cDNA synthesis will be carried out using oligo-dT primers, and RT-qPCR will be performed with primers targeting candidate spine-related genes (Nolan et al., 2006). The expression data will be normalized using a housekeeping gene, and relative expression levels will be analyzed using the 2<sup>(-ΔΔCt)</sup> method to compare spiny and non-spiny individuals.</p>
+            <h4>RNA Sequencing and Gene Expression Analysis</h4>
+            <p>RNA extraction, cDNA synthesis, and RT-qPCR quantification target candidate spine-related genes. Differential expression analysis identifies genes and regulatory elements involved in spine formation (<em>Nolan et al., 2006</em>).</p>
 
-                                    <h4>Comparative Genomic Analysis with Other Amaranthus Species</h4>
-                                    <p>Comparative genomic analyses will be performed to explore the synteny, gene polymorphisms, and expression patterns of candidate spine-related genes across various <em>Amaranthus</em> species previously sequenced in the lab. These analyses will provide insights into the structural and functional variations of spine-associated regions and help to contextualize the evolutionary development of spiny traits within the genus.</p>
+            <h4>Comparative Genomics</h4>
+            <p>Comparisons of spine-related genomic regions across <em>Amaranthus</em> species examine synteny, structural variants, and polymorphisms, providing evolutionary context for spine development.</p>
+        </section>
 
-                                    <p>To summarize, this study aims to uncover the genetic mechanisms underlying spine development in <em>Amaranthus</em>. By integrating phenotypic, genotypic, and transcriptomic analyses, the study will identify specific genomic regions, candidate genes, and regulatory elements associated with spine traits. Comparative genomic analyses will provide insights into the structural and functional variations of spine-related genes across <em>Amaranthus</em> species, shedding light on the evolutionary basis of spine development. Ultimately, this work will contribute to a deeper understanding of plant defense mechanisms and offer potential genetic targets for managing spiny traits in agricultural settings, with applications in weed control and breeding strategies.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Research Questions -->
-                        <div class="card">
-                            <div class="card-header" id="headingResearchQuestions">
-                                <h2 class="mb-0">
-                                    <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapseResearchQuestions" aria-expanded="false" aria-controls="collapseResearchQuestions">
-                                        Research Questions
-                                    </a>
-                                </h2>
-                            </div>
-                            <div id="collapseResearchQuestions" class="collapse" aria-labelledby="headingResearchQuestions" data-parent="#posterAccordion">
-                                <div class="card-body">
-                                    <ol>
-                                        <li>What are the key genetic differences between spiny and spineless <em>Amaranthus</em> species?</li>
-                                        <li>Are there specific mutations that correlate with spine gain in cultivated <em>Amaranthus</em> species?</li>
-                                        <li>Are there structural variants or mutations in the regulatory regions of these genes that lead to spine formation?</li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Download Poster Button -->
-                    <a href="path_to_full_poster.pdf" class="btn btn-uiuc mt-4" target="_blank">Download Full Poster</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- News-like Section -->
+        <!-- News Section (Optional) -->
         <div class="news-section">
             <h3>Did You Know?</h3>
-            <p><strong>Spines, thorns, and prickles are different!</strong> Although they may seem similar, these plant structures differ in their origin and anatomy. Spines are modified leaves, thorns are modified stems, and prickles are extensions of the cortex or epidermis. Understanding these differences is essential in botany and helps in studying plant defense mechanisms.</p>
+            <p><strong>Spines, Thorns, and Prickles Are Not the Same!</strong> Spines originate from leaf tissue, thorns from stems, and prickles from the epidermis/cortex. Understanding these differences is key to deciphering the evolution of plant defense mechanisms.</p>
         </div>
 
-        <!-- Flowchart Section -->
-        <div class="flowchart">
-            <h2>Research Workflow</h2>
-            <!-- Flowchart Image Placeholder -->
-            <img src="path_to_flowchart_image.png" alt="Research Workflow Flowchart" class="poster-img">
-        </div>
+        <!-- Research Questions Section -->
+        <section id="research-questions">
+            <h2 class="section-title">Research Questions</h2>
+            <ol>
+                <li>What are the key genetic differences between spiny and spineless <em>Amaranthus</em> species?</li>
+                <li>Are there specific mutations correlating with spine gain in cultivated and weedy <em>Amaranthus</em> species?</li>
+                <li>How do structural variants or regulatory mutations influence the expression of spine-related genes?</li>
+            </ol>
+        </section>
 
         <!-- Contributors Section -->
-        <div class="poster-section" id="contributors">
-            <h2>Contributors</h2>
-            <ul class="list-group">
-                <li class="list-group-item">
-                    <strong>Ramandeep Kaur</strong> - Graduate Researcher
-                </li>
-                <li class="list-group-item">
-                    <strong>Alexander J. Lopez</strong> - Research Associate
-                </li>
-                <li class="list-group-item">
-                    <strong>Patrick J. Tranel</strong> - Professor
-                </li>
+        <section id="contributors">
+            <h2 class="section-title">Contributors</h2>
+            <ul class="list-group mb-4">
+                <li class="list-group-item"><strong>Ramandeep Kaur</strong> - Graduate Researcher</li>
+                <li class="list-group-item"><strong>Alexander J. Lopez</strong> - Research Associate</li>
+                <li class="list-group-item"><strong>Patrick J. Tranel</strong> - Professor</li>
             </ul>
-        </div>
+            <a href="path_to_full_poster.pdf" class="btn btn-uiuc" target="_blank">Download Full Poster</a>
+        </section>
+
+        <!-- Supplementary Figures (Carousel) -->
+        <section id="supplementary" class="supplementary-section">
+            <h2 class="section-title">Supplementary Figures</h2>
+            <div id="supplementaryCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#supplementaryCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#supplementaryCarousel" data-slide-to="1"></li>
+                <li data-target="#supplementaryCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="path_to_supplementary_image1.jpg" class="d-block w-50" alt="Supplementary Figure 1">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Supplementary Figure 1</h5>
+                    <p>Description of supplementary figure 1.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="path_to_supplementary_image2.jpg" class="d-block w-50" alt="Supplementary Figure 2">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Supplementary Figure 2</h5>
+                    <p>Description of supplementary figure 2.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="path_to_supplementary_image3.jpg" class="d-block w-50" alt="Supplementary Figure 3">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Supplementary Figure 3</h5>
+                    <p>Description of supplementary figure 3.</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#supplementaryCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#supplementaryCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+        </section>
 
         <!-- References Section -->
-        <div class="poster-section" id="references">
-            <h2>References</h2>
+        <section id="references">
+            <h2 class="section-title">References</h2>
             <ol>
                 <li>Smith, J. A., & Doe, R. L. (2020). Genetic Basis of Spine Development in Plants. <em>Plant Biology Journal</em>, 15(3), 123-135.</li>
                 <li>Johnson, M. K., & Lee, T. Y. (2019). Evolutionary Origins of Defensive Structures in Weeds. <em>Weed Science</em>, 67(2), 98-110.</li>
                 <li>Dai, X., & Long, Q. (2015). A Fast and Accurate Algorithm for Genome-Wide Association Studies. <em>Bioinformatics</em>, 31(6), 874-876.</li>
-                <li>He, J., Zhao, X., Laroche, A., et al. (2014). Genotyping-by-Sequencing (GBS), An Ultimate Marker-Assisted Selection Tool. <em>Crop Science</em>, 54(4), 1344-1351.</li>
+                <li>He, J., Zhao, X., Laroche, A., et al. (2014). Genotyping-by-Sequencing (GBS): An Ultimate Marker-Assisted Selection Tool. <em>Crop Science</em>, 54(4), 1344-1351.</li>
                 <li>Nolan, T., Hands, R. E., & Bustin, S. A. (2006). Quantification of mRNA Using Real-Time RT-PCR. <em>Nature Protocols</em>, 1(3), 1559-1582.</li>
                 <li>Vilanova, S., Sargent, D. J., Arús, P., & Monfort, A. (2020). SILEX: A Fast and Inexpensive Method for Whole Genome DNA Extraction from Plants. <em>Methods in Molecular Biology</em>, 1302, 153-159.</li>
                 <li>Satterlee, J. W., et al. (2024). Advanced Backcrossing Techniques in <em>Amaranthus</em>. <em>Genetics</em>, 206(1), 45-58.</li>
-                <!-- Add more references as needed -->
             </ol>
-        </div>
-
+        </section>
     </div>
 
     <!-- Scroll to Top Button -->
@@ -311,7 +289,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- Custom JavaScript -->
     <script>
-        // Scroll to Top Button Functionality
+        // Scroll to Top Button
         var scrollTopBtn = document.getElementById("scrollTopBtn");
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
@@ -325,5 +303,6 @@
             $('html, body').animate({scrollTop: 0}, 'fast');
         }
     </script>
+
 </body>
 </html>
